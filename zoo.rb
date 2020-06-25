@@ -3,3 +3,47 @@ class Zoo
     @pracownicy = []
     @klatki = []
   end
+
+  def infopracownicy()
+    @pracownicy.each {&:info()}
+  end
+
+  def infoklatki()
+    @klatki.each do |x|
+      x.info()
+      @pracownicy.each {|y| x.sprzata == y.id ? y.info()}
+    end
+  end
+
+  def infozwierzeta()
+    @klatki.each {&:infozwierzeta()}
+  end
+
+  def dodajpracownika(imie, nazwisko)
+     @pracownicy.length == 0 ? id = 1000 : id = @pracownicy[-1].id + 1
+     x = Pracownik.new(imie, nazwisko, id)
+     @pracownicy << x
+   end
+
+   def dodajklatke(pojemnosc, sprzata)
+     if @pracownicy.none? {|x| x.id == sprzata}
+       puts "Nie ma takiego pracownika"
+     else
+     @klatki.length == 0 ? id = 1 : id = @klatki[-1].numer + 1
+     x = Klatka.new(id, pojemnosc, sprzata)
+     @klatki << x
+      end
+    end
+
+    def powiekszklatke(klatka, dodaj)
+      @klatki.each {|x| x.numer == klatka ? x.pojemnosc += dodaj}
+    end
+
+    def dodajzwierze(zwierze, klatka)
+      @klatki.each {|x| x.numer == klatka ? x.dodajzwierze(zwierze)}
+    end
+
+    def posprzataj(klatka)
+      @klatki.each {|x| x.numer == klatka ? x.brud = 0}
+    end
+  end    
