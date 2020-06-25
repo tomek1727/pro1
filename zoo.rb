@@ -5,7 +5,7 @@ class Zoo
   end
 
   def infopracownicy()
-    @pracownicy.each {&:info()}
+    @pracownicy.each {&:info}
   end
 
   def infoklatki()
@@ -16,7 +16,7 @@ class Zoo
   end
 
   def infozwierzeta()
-    @klatki.each {&:infozwierzeta()}
+    @klatki.each {&:infozwierzeta}
   end
 
   def dodajpracownika(imie, nazwisko)
