@@ -3,10 +3,10 @@ load 'pracownik.rb'
 load 'zoo.rb'
 load 'zwierze.rb'
 
-zoo = Zoo.new
+$zoo = Zoo.new
 
 def menu()
-  puts "Witaj w Zoo"
+  puts "\n\nWitaj w Zoo"
   puts "Co chcesz zrobić?"
   puts "[1] Pokaż pracownikow"
   puts "[2] Pokaż klatki"
@@ -17,12 +17,13 @@ def menu()
   puts "[7] Powieksz Klatke"
   puts "[8] Posprzataj Klatke"
   odp = $stdin.gets.chomp.to_i
+  puts "\n\n"
   if odp == 1
-    zoo.infopracownicy
+    $zoo.infopracownicy
   elsif odp == 2
-    zoo.infoklatki
+    $zoo.infoklatki
   elsif odp == 3
-    zoo.infozwierzeta
+    $zoo.infozwierzeta
   elsif odp == 4
     nowypracownik()
   elsif odp == 5
@@ -34,7 +35,7 @@ def menu()
   elsif odp == 8
     posprzatajklatke()
   end
-  $stdin.gets.chomp
+
   menu()
 end
 
@@ -43,7 +44,7 @@ def nowypracownik()
   imie = $stdin.gets.chomp
   puts "Podaj nazwisko nowego pracownika: "
   nazwisko = $stdin.gets.chomp
-  zoo.dodajpracownika(imie, nazwisko)
+  $zoo.dodajpracownika(imie, nazwisko)
 end
 
 def nowezwierze()
@@ -78,7 +79,7 @@ def nowezwierze()
   end
   puts "Do jakiej klatki chcesz dodac zwierze?[numer]"
   klatka = $stdin.gets.chomp.to_i
-  zoo.dodajzwierze(x, klatka)
+  $zoo.dodajzwierze(x, klatka)
 end
 
 def nowaklatka()
@@ -86,7 +87,7 @@ def nowaklatka()
   rozmiar = $stdin.gets.chomp.to_i
   puts "Kto ma byc odpowiedzialny za sprzatanie?[id pracownika]"
   sprzata = $stdin.gets.chomp.to_i
-  zoo.dodajklatke(rozmiar, sprzata)
+  $zoo.dodajklatke(rozmiar, sprzata)
 end
 
 def wiekszaklatka()
@@ -94,13 +95,13 @@ def wiekszaklatka()
   klatka = $stdin.gets.chomp.to_i
   puts "O ile miejs chcesz ją powiększyć?"
   dodaj = $stdin.gets.chomp.to_i
-  zoo.powiekszklatke(klatka, dodaj)
+  $zoo.powiekszklatke(klatka, dodaj)
 end
 
 def posprzatajklatke()
   puts "Którą klatkę posprzątać?[numer]"
   klatka = $stdin.gets.chomp.to_i
-  zoo.posprzataj(klatka)
+  $zoo.posprzataj(klatka)
 end
 
 menu()
