@@ -3,9 +3,12 @@ class Pracownik
   @imie = imie
   @nazwisko = nazwisko
   @id = id
+  @klatki = []
   end
 
   def info()
     puts "#{@imie} #{@nzwisko} #{@id}"
+    @klatki.each {|x| print x}
+    puts ""
   end
 end

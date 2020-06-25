@@ -7,9 +7,6 @@ class Zoo
   def infopracownicy()
     @pracownicy.each do |x|
       x.info()
-      print "Sprząta klatki: "
-      @klatki.each {|y| y.sprzata == x.id ? print "#{y.numer} "}
-      puts ""
   end
 
   def infoklatki()
@@ -25,7 +22,7 @@ class Zoo
   end
 
   def dodajpracownika(imie, nazwisko)
-     @pracownicy.length == 0 ? id = 1000 : id = @pracownicy[-1].id + 1
+     id = @pracownicy.length + 1000
      x = Pracownik.new(imie, nazwisko, id)
      @pracownicy << x
    end
@@ -34,8 +31,9 @@ class Zoo
      if @pracownicy.none? {|x| x.id == sprzata}
        puts "Nie ma takiego pracownika"
      else
-     @klatki.length == 0 ? id = 1 : id = @klatki[-1].numer + 1
+     id = @klatki.length + 1
      x = Klatka.new(id, pojemnosc, sprzata)
+     @pracownicy.each {|x| x.id == sprzata ? x.klatki << id }
      @klatki << x
       end
     end
