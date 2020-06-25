@@ -5,7 +5,11 @@ class Zoo
   end
 
   def infopracownicy()
-    @pracownicy.each {&:info}
+    @pracownicy.each do |x|
+      x.info()
+      print "Sprząta klatki: "
+      @klatki.each {|y| y.sprzata == x.id ? print "#{y.numer} "}
+      puts ""
   end
 
   def infoklatki()
