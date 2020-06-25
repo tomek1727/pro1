@@ -68,9 +68,10 @@ def nowezwierze()
     x = Ssak.new(imie, gatunek, srodowisko)
   elsif odp == 3
     puts "Czy gad jest jadowity?"
-    puts "[0]Nie"
-    puts "[1]Tak"
-    jadowity = $stdin.gets.chomp.to_i
+    puts "[1]Nie"
+    puts "[2]Tak"
+    taknie = $stdin.gets.chomp.to_i
+    jadowity = taknie == 1 ? false : true
     x = Gad.new(imie, gatunek, jadowity)
   else
     menu()
@@ -103,4 +104,3 @@ def posprzatajklatke()
 end
 
 menu()
-    
