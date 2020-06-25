@@ -1,0 +1,21 @@
+Proszę zaprojektować diagram klas na podstawie słownego opisu problemu. Następnie proszę o
+implementację zaprojektowanego diagramu i napisanie programu testującego jego działanie.
+Opis problemu:
+W pewnym ogrodzie zoologicznym znajdują się trzy rodzaje zwierząt: ssaki, ptaki i gady. O
+każdym ze zwierząt gromadzone są informacje na temat gatunku, rodzaju pożywienia oraz pochodzenia
+zwierzęcia. Każdy z trzech rodzajów zwierząt posiada też pewne unikatowe cechy i/lub umiejętności.
+Ptaki potrafią latać, a informacja o maksymalnej długości lotu ptaka bez odpoczynku wyznaczana
+jest na podstawie iloczynu rozpiętości skrzydeł ptaka i jego wytrzymałość. Niektóre gady mogą być
+jadowite. W zoo gromadzone są także informacje na temat naturalnego środowiska życia ssaków.
+Wszystkie zwierzęta trzymane są w klatkach, które mają pewną określoną pojemność. Klatka może
+wymagać posprzątania. Każda klatka jest identyfikowana za pomocą unikatowego numeru.
+W zoo zatrudnieni są również opiekunowie, którzy odpowiadają m.in. za sprzątanie klatek. Każdy
+z nich może być przydzielony do opieki nad kilkoma klatkami.
+Dyrekcja zoo potrzebuje na bieżąco sprawdzać informacje na temat wszystkich klatek wraz ze
+szczegółowymi informacjami na temat znajdujących się w nich zwierząt oraz na temat opiekunów
+pracujących w zoo.
+Dyrekcja może podjąć decyzję o budowie nowej klatki, powiększeniu klatki, zatrudnieniu nowego
+pracownika oraz umieszczeniu w klatce nowego zwierzęcia.
+Proszę o zaprojektowanie systemu umożliwiającego dyrekcji podjęcie powyższych działań.
+Przy ocenie zadania główny nacisk będzie kładziony na:
+Utworzony diagram klas. Implementację. Wyniki testów. 
