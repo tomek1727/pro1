@@ -11,6 +11,7 @@ class Zoo
   def infoklatki()
     @klatki.each do |x|
       x.info()
+      print "Sprząta: "
       @pracownicy.each {|y| x.sprzata == y.id ? y.info()}
     end
   end
