@@ -22,4 +22,6 @@ class Klatka
     puts "\n\nKlatka nr: #{@numer}"
     @zwierzeta.each {|x| x.info()}
   end
+  def posprzątaj()
+    @brud = 0
 end

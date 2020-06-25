@@ -44,6 +44,6 @@ class Zoo
     end
 
     def posprzataj(klatka)
-      @klatki.each {|x| x.numer == klatka ? x.brud = 0}
+      @klatki.each {|x| x.numer == klatka ? x.posprzataj}
     end
-  end    
+  end
