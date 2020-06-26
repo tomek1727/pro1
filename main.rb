@@ -104,4 +104,17 @@ def posprzatajklatke()
   $zoo.posprzataj(klatka)
 end
 
+$zoo.dodajpracownika("Andrzej", "Trzaskowski")
+$zoo.dodajpracownika("Jarek", "Kubica")
+$zoo.dodajklatke(8, 1001)
+$zoo.dodajklatke(3, 1000)
+$zoo.dodajklatke(7, 1000)
+x = Ptak.new("Ania", "Sowa", 50, 5)
+$zoo.dodajzwierze(x, 1)
+x = Ssak.new("Tomek", "Kot", "Tundra")
+$zoo.dodajzwierze(x, 2)
+x = Gad.new("Mateusz", "Krokodyl", false)
+$zoo.dodajzwierze(x, 3)
+
+
 menu()
